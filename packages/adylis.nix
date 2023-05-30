@@ -6,6 +6,7 @@ let
 in {
 
   environment.systemPackages = with pkgs; [
-    # Packages go here
+    unstable.jdk17
+    prismlauncher
   ];
 }
