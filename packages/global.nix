@@ -9,7 +9,14 @@ in {
     # Utilities
     direnv
     git
+    nixos-option
+
+    # Programming
     unstable.vscodium
+
+    # Art
+    audacity
+    gimp-with-plugins
 
     # Gnome Extensions
     gnomeExtensions.appindicator
