@@ -12,18 +12,21 @@ in {
     nixos-option
 
     # Programming
-    unstable.vscodium
+    vscodium
 
     # Art
     audacity
     gimp-with-plugins
+    obs-studio
 
     # Gnome Extensions
     gnomeExtensions.appindicator
     gnomeExtensions.dash2dock-lite
 
     # Other
-    unstable.armcord
-    unstable.cider
+    armcord
+    cider
+    mumble
+    murmur
   ];
 }
