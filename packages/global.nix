@@ -4,7 +4,6 @@
 let
   unstable = import <nixos-unstable> { config = { allowUnfree = true; }; };
 in {
-
   environment.systemPackages = with pkgs; [
     # Utilities
     direnv
@@ -19,14 +18,23 @@ in {
     gimp-with-plugins
     obs-studio
 
-    # Gnome Extensions
-    gnomeExtensions.appindicator
-    gnomeExtensions.dash2dock-lite
-
-    # Other
-    armcord
-    cider
+    # Communication
+    (
+      unstable.discord.override {
+        withVencord = true;
+        # withOpenASAR = true;
+      }
+    )
     mumble
     murmur
+
+    # Gnome
+    gnome.gnome-themes-extra
+    gnome.gnome-tweaks
+    gnomeExtensions.appindicator
+
+    # Other
+    cider
+    vivaldi
   ];
 }
