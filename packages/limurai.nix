@@ -6,6 +6,6 @@ let
 in {
 
   environment.systemPackages = with pkgs; [
-    # Packages go here
+    libreoffice
   ];
 }
